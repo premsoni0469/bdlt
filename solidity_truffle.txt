@@ -1,0 +1,48 @@
+1. Install node v20 (if node version greater than 20 installed on system): 
+			CMD —> nvm install 20
+			    	       nvm use 20
+     Verify node version: CMD —> node -v
+2. Install truffle: CMD —> npm install truffle
+      Verify version: CMD —> truffle version
+3. Open ganache, Quickstart ethereum
+4. Create project folder: CMD —> mkdir project
+					then  cd project
+5. Initialise truffle project: CMD —> truffle init
+     In folders, go into contracts folder & write a contract
+6. Create a file Hello.sol in contracts folder:
+CODE:
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract Hello {
+    string public message = "Hello Blockchain";
+}
+
+7. Then, go in truffle-config.js
+     Uncomment this part:
+	networks: {
+  		development: {
+    			host: "127.0.0.1",
+    			port: 7545,
+    			network_id: "*"
+  		}	
+	},
+ 
+    Also uncomment this part:
+ 	compilers: {
+  		solc: {
+   			 version: "0.8.0"
+ 		 }
+	}
+
+8. Compile contract: CMD —> truffle compile
+9. Create migration file: 
+	Name: 2_deploy_contracts.js
+	Code:
+		const Hello = artifacts.require("Hello");
+		module.exports = function(deployer) {
+  			deployer.deploy(Hello);
+		};
+
+10. Now deploy contract:  CMD —> truffle migrate
+	(Ganache must be open at this point)
