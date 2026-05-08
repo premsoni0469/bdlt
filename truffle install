@@ -1,0 +1,28 @@
+Perform and write truffle installation steps:
+1. Install node js
+2. Install truffle: CMD —> npm install truffle
+3. Verify truffle: CMD —> truffle version
+4. Create truffle project: CMD —> mkdir MyProject
+						cd MyProject
+5. Initialize truffle in directory: CMD —> truffle init
+6. In contracts folder, create a simple contract, named SimpeStorage.sol
+Code:
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SimpleStorage {
+
+    uint public data;
+
+    function setData(uint _data) public {
+        data = _data;
+    }
+
+    function getData() public view returns(uint) {
+        return data;
+    }
+}
+
+7. Save it and compile the contract: CMD —> truffle compile
+
+DONE
