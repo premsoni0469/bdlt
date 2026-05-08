@@ -5,7 +5,7 @@
 	5	Phir deploy karte time Metamask select karo, metamask me connection approve karlo, and deploy karo
 Jab contract deploy ho jaaye, tab jaake react ka code likhna
 
-Folder banao, phir npx create-react- app <app_name>, phir cd <app_name>
+Folder banao, phir npx create-react-app <app_name>, phir cd <app_name>
 Phir install karo ethers ko => Command: npm install ethers
 Phir code ko run karo 
 
@@ -19,7 +19,7 @@ function App() {
  const [storedNumber, setStoredNumber] = useState("");
 
  // Paste your deployed contract address here
- const contractAddress = "0x83c89930029fe22c6E0A6e77a7f6714E51180E28";
+ const contractAddress = "0x83c89930029fe22c6E0A6e77a7f6714E51180E28"; // Apna wala daalna
 
  // Contract ABI
  const abi = [
